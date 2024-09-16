@@ -40,8 +40,13 @@ struct LoginView: View {
                 
                 Button("Login") {
                     // Call the sign-in method with email and password
-                    userSignModel.signIn(email: email, password: password)
-                    isUserLoggedIn = true
+                    userSignModel.signIn(email: email, password: password) {success in
+                        if success {
+                            isUserLoggedIn = true
+                        } else {
+                            isUserLoggedIn = false
+                        }
+                    }
                 }
                 .padding()
                 .background(Color.blue)

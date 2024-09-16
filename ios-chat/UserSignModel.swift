@@ -12,7 +12,7 @@ class UserSignModel: ObservableObject {
     @Published var isLoading = false
     @Published var error: String?
 
-    func signIn(email: String, password: String) {
+    func signIn(email: String, password: String, completion: @escaping (Bool) -> Void) {
         isLoading = true
         error = nil
 
@@ -55,17 +55,22 @@ class UserSignModel: ObservableObject {
                             let decodedResponse = try JSONDecoder().decode(UserSignModelResponse.self, from: data)
                             if decodedResponse.status == "success", let userData = decodedResponse.data {
                                 self?.currentUser = userData
+                                completion(true)
                             } else {
                                 self?.error = decodedResponse.error ?? "Unexpected response format"
+                                completion(false)
                             }
                         } catch {
                             self?.error = "Error decoding response: \(error.localizedDescription)"
+                            completion(false)
                         }
                     }
                 case 401:
                     self?.error = "Invalid credentials"
+                    completion(false)
                 default:
                     self?.error = "Unexpected status code: \(httpResponse.statusCode)"
+                    completion(false)
                 }
             }
         }.resume()
