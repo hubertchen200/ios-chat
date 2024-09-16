@@ -19,6 +19,9 @@
 		A95B43742C97B4910039DA2E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43732C97B4910039DA2E /* ProfileView.swift */; };
 		A95B43762C97B4AA0039DA2E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43752C97B4AA0039DA2E /* HomeView.swift */; };
 		A95B43782C97B4BD0039DA2E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43772C97B4BD0039DA2E /* NotificationView.swift */; };
+		A95B437A2C97D18C0039DA2E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43792C97D18C0039DA2E /* KeychainHelper.swift */; };
+		A95B437F2C97D4130039DA2E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B437E2C97D4130039DA2E /* UserSession.swift */; };
+		A95B43812C97D4DB0039DA2E /* UserSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43802C97D4DB0039DA2E /* UserSessionManager.swift */; };
 		A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		A95B43732C97B4910039DA2E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A95B43752C97B4AA0039DA2E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A95B43772C97B4BD0039DA2E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A95B43792C97D18C0039DA2E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		A95B437E2C97D4130039DA2E /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		A95B43802C97D4DB0039DA2E /* UserSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionManager.swift; sourceTree = "<group>"; };
 		A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,13 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				A95482802C8E4D9C002775DA /* ios_chatApp.swift */,
-				A95482822C8E4D9C002775DA /* ContentView.swift */,
-				A95B436F2C97B3F70039DA2E /* LoginView.swift */,
-				A95B43712C97B4640039DA2E /* MainView.swift */,
-				A95B43752C97B4AA0039DA2E /* HomeView.swift */,
-				A95B43732C97B4910039DA2E /* ProfileView.swift */,
-				A95B43772C97B4BD0039DA2E /* NotificationView.swift */,
-				A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */,
+				A95B437C2C97D2BF0039DA2E /* Utilities */,
+				A95B437D2C97D3250039DA2E /* Views */,
+				A95B437B2C97D2740039DA2E /* Services */,
 				A95482842C8E4D9D002775DA /* Assets.xcassets */,
 				A95482862C8E4D9D002775DA /* Preview Content */,
 			);
@@ -143,6 +145,37 @@
 				A954829D2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift */,
 			);
 			path = "ios-chatUITests";
+			sourceTree = "<group>";
+		};
+		A95B437B2C97D2740039DA2E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A95B437C2C97D2BF0039DA2E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A95B43792C97D18C0039DA2E /* KeychainHelper.swift */,
+				A95B437E2C97D4130039DA2E /* UserSession.swift */,
+				A95B43802C97D4DB0039DA2E /* UserSessionManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A95B437D2C97D3250039DA2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A95482822C8E4D9C002775DA /* ContentView.swift */,
+				A95B43712C97B4640039DA2E /* MainView.swift */,
+				A95B43732C97B4910039DA2E /* ProfileView.swift */,
+				A95B43772C97B4BD0039DA2E /* NotificationView.swift */,
+				A95B43752C97B4AA0039DA2E /* HomeView.swift */,
+				A95B436F2C97B3F70039DA2E /* LoginView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95482832C8E4D9C002775DA /* ContentView.swift in Sources */,
+				A95B437F2C97D4130039DA2E /* UserSession.swift in Sources */,
 				A95B43762C97B4AA0039DA2E /* HomeView.swift in Sources */,
 				A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */,
 				A95B43782C97B4BD0039DA2E /* NotificationView.swift in Sources */,
+				A95B437A2C97D18C0039DA2E /* KeychainHelper.swift in Sources */,
 				A95B43702C97B3F70039DA2E /* LoginView.swift in Sources */,
+				A95B43812C97D4DB0039DA2E /* UserSessionManager.swift in Sources */,
 				A95B43722C97B4640039DA2E /* MainView.swift in Sources */,
 				A95B43742C97B4910039DA2E /* ProfileView.swift in Sources */,
 				A95482812C8E4D9C002775DA /* ios_chatApp.swift in Sources */,

@@ -40,8 +40,8 @@ struct LoginView: View {
                 
                 Button("Login") {
                     // Call the sign-in method with email and password
-                    userSignModel.signIn(email: email, password: password) {success in
-                        if success {
+                    userSignModel.signIn(email: email, password: password) {success1 in
+                        if success1 {
                             isUserLoggedIn = true
                         } else {
                             isUserLoggedIn = false
