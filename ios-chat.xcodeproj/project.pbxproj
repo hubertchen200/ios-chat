@@ -14,6 +14,7 @@
 		A95482922C8E4D9D002775DA /* ios_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95482912C8E4D9D002775DA /* ios_chatTests.swift */; };
 		A954829C2C8E4D9D002775DA /* ios_chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954829B2C8E4D9D002775DA /* ios_chatUITests.swift */; };
 		A954829E2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954829D2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift */; };
+		A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		A95482972C8E4D9D002775DA /* ios-chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-chatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A954829B2C8E4D9D002775DA /* ios_chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatUITests.swift; sourceTree = "<group>"; };
 		A954829D2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A95482802C8E4D9C002775DA /* ios_chatApp.swift */,
 				A95482822C8E4D9C002775DA /* ContentView.swift */,
+				A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */,
 				A95482842C8E4D9D002775DA /* Assets.xcassets */,
 				A95482862C8E4D9D002775DA /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95482832C8E4D9C002775DA /* ContentView.swift in Sources */,
+				A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */,
 				A95482812C8E4D9C002775DA /* ios_chatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
