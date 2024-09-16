@@ -14,6 +14,11 @@
 		A95482922C8E4D9D002775DA /* ios_chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95482912C8E4D9D002775DA /* ios_chatTests.swift */; };
 		A954829C2C8E4D9D002775DA /* ios_chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954829B2C8E4D9D002775DA /* ios_chatUITests.swift */; };
 		A954829E2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A954829D2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift */; };
+		A95B43702C97B3F70039DA2E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B436F2C97B3F70039DA2E /* LoginView.swift */; };
+		A95B43722C97B4640039DA2E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43712C97B4640039DA2E /* MainView.swift */; };
+		A95B43742C97B4910039DA2E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43732C97B4910039DA2E /* ProfileView.swift */; };
+		A95B43762C97B4AA0039DA2E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43752C97B4AA0039DA2E /* HomeView.swift */; };
+		A95B43782C97B4BD0039DA2E /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B43772C97B4BD0039DA2E /* NotificationView.swift */; };
 		A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		A95482972C8E4D9D002775DA /* ios-chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-chatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A954829B2C8E4D9D002775DA /* ios_chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatUITests.swift; sourceTree = "<group>"; };
 		A954829D2C8E4D9D002775DA /* ios_chatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_chatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A95B436F2C97B3F70039DA2E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A95B43712C97B4640039DA2E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A95B43732C97B4910039DA2E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A95B43752C97B4AA0039DA2E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A95B43772C97B4BD0039DA2E /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +108,11 @@
 			children = (
 				A95482802C8E4D9C002775DA /* ios_chatApp.swift */,
 				A95482822C8E4D9C002775DA /* ContentView.swift */,
+				A95B436F2C97B3F70039DA2E /* LoginView.swift */,
+				A95B43712C97B4640039DA2E /* MainView.swift */,
+				A95B43752C97B4AA0039DA2E /* HomeView.swift */,
+				A95B43732C97B4910039DA2E /* ProfileView.swift */,
+				A95B43772C97B4BD0039DA2E /* NotificationView.swift */,
 				A99FDA0E2C8FCC6A00E61D6E /* UserSignModel.swift */,
 				A95482842C8E4D9D002775DA /* Assets.xcassets */,
 				A95482862C8E4D9D002775DA /* Preview Content */,
@@ -261,7 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A95482832C8E4D9C002775DA /* ContentView.swift in Sources */,
+				A95B43762C97B4AA0039DA2E /* HomeView.swift in Sources */,
 				A99FDA0F2C8FCC6A00E61D6E /* UserSignModel.swift in Sources */,
+				A95B43782C97B4BD0039DA2E /* NotificationView.swift in Sources */,
+				A95B43702C97B3F70039DA2E /* LoginView.swift in Sources */,
+				A95B43722C97B4640039DA2E /* MainView.swift in Sources */,
+				A95B43742C97B4910039DA2E /* ProfileView.swift in Sources */,
 				A95482812C8E4D9C002775DA /* ios_chatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
