@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @Binding var isUserLoggedIn: Bool
-    @StateObject var userSignModel = UserSignModel() // Initialize the model
-    @State private var email: String = ""
-    @State private var password: String = ""
-    
+    @ObservedObject var loginViewModel: LoginViewModel
+
     var body: some View {
         VStack {
             // Show a loading indicator when sign-in is in progress
-            if userSignModel.isLoading {
+            if loginViewModel.isLoading {
                 ProgressView("Signing in...")
                     .padding()
             } else {
@@ -27,24 +24,25 @@ struct LoginView: View {
                     .foregroundColor(.blue)
                     .padding(.bottom, 20)
                 // Login form
-                TextField("Email", text: $email)
+                TextField("Email", text: $loginViewModel.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     .padding()
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $loginViewModel.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     
-               
+                
                 
                 Button("Login") {
-                    // Call the sign-in method with email and password
-                    userSignModel.signIn(email: email, password: password) {success1 in
-                        if success1 {
-                            isUserLoggedIn = true
-                        } else {
-                            isUserLoggedIn = false
+                    
+                    Task {
+                        do {
+                            try await loginViewModel.login()
+                        } catch {
+                            // Handle the error here
+                            print("Login failed with error: \(error)")
                         }
                     }
                 }
@@ -54,20 +52,15 @@ struct LoginView: View {
                 .cornerRadius(10)
                 
                 // Show error message if there’s an error
-                if let error = userSignModel.error {
+                if let error = loginViewModel.errorMessage {
                     Text(error)
                         .foregroundColor(.red)
                         .padding()
                 }
             }
-
-            // Show welcome message if logged in
-            if let currentUser = userSignModel.currentUser {
-                Text("Welcome, \(currentUser.firstname) \(currentUser.lastname)!")
-                    .padding()
-            }
+            
         }
-        .padding()
+        .padding(20)
     }
 }
 

@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isUserLoggedIn: Bool = false
+    @StateObject private var loginViewModel = LoginViewModel() // Initialize the view model
 
     var body: some View {
-        if isUserLoggedIn {
+        if loginViewModel.isLoggedIn {
             MainView() // Navigate to MainView after login
         } else {
-            LoginView(isUserLoggedIn: $isUserLoggedIn) // Pass binding to LoginView
+            LoginView(loginViewModel: loginViewModel)
         }
     }
 }

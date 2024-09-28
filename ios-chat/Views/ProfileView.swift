@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ProfileView: View {
-    var body: some View {
-        Text("Profile View!")
-    }
+    @StateObject private var viewModel = ProfileViewModel() // Initialize the ViewModel
+
+      var body: some View {
+          VStack(alignment: .leading, spacing: 10) {
+              Text("Profile View")
+                  .font(.largeTitle)
+                  .bold()
+              
+              if let userData = viewModel.userData {
+                  Text("Firstname: \(userData.firstname)")
+                  Text("Lastname: \(userData.lastname)")
+                  Text("Email: \(userData.email)")
+                  Text("Username: \(userData.username)")
+              } else {
+                  Text("No user data available.")
+              }
+          }
+          .padding()
+      }
 }
 
 #Preview {
