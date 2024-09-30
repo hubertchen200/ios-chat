@@ -27,6 +27,15 @@ struct MainView: View {
             }
             
             NavigationView {
+                ChatView()
+            }
+            .tabItem {
+                Image(systemName: "bell.fill")
+                Text("Chat")
+            }
+
+            
+            NavigationView {
                 ProfileView()
             }
             .tabItem {
