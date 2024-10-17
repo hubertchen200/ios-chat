@@ -23,10 +23,10 @@ struct TokenResponse: Codable {
 }
 
 struct UserData: Codable {
-    let email: String
-    let firstname: String
-    let lastname: String
-    let username: String
+    var email: String
+    var firstname: String
+    var lastname: String
+    var username: String
 }
 
 
